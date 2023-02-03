@@ -25,4 +25,21 @@ const setStorageItem = (name, item) => {
   localStorage.setItem(name, JSON.stringify(item));
 };
 
-export { getElement, allProductsUrl, singleProductUrl, getStorageItem, setStorageItem };
+// --------- Product Utils --------- //
+const formatPrice = price => {
+  // price is in cents, we convert it to dollars ($)
+  let formattedPrice = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD'
+  }).format((price / 100).toFixed(2));
+  return formattedPrice;
+};
+
+export {
+  getElement,
+  allProductsUrl,
+  singleProductUrl,
+  getStorageItem,
+  setStorageItem,
+  formatPrice
+};
