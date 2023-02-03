@@ -10,4 +10,19 @@ const getElement = selection => {
   throw new Error(`Please check "${selection}" selector, no such element exist`);
 };
 
-export { getElement, allProductsUrl, singleProductUrl };
+// --------- LOCAL STORAGE --------- //
+const getStorageItem = item => {
+  let storageItem = localStorage.getItem(item);
+  if (storageItem) {
+    storageItem = JSON.parse(localStorage.getItem(item));
+  } else {
+    storageItem = [];
+  }
+  return storageItem;
+};
+
+const setStorageItem = (name, item) => {
+  localStorage.setItem(name, JSON.stringify(item));
+};
+
+export { getElement, allProductsUrl, singleProductUrl, getStorageItem, setStorageItem };
