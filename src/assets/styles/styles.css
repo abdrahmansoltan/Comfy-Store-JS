@@ -725,3 +725,62 @@ Products Page
   text-align: center;
   margin-top: 4rem;
 }
+/*
+=============== 
+Single Product Page
+===============
+*/
+.page-hero {
+  min-height: 20vh;
+  display: grid;
+  place-items: center;
+  background: var(--clr-grey-10);
+  color: var(--clr-grey-5);
+}
+.page-hero-title {
+  font-weight: 500;
+}
+.single-product {
+  padding: 2rem 0;
+}
+.single-product-center {
+  margin: 2rem auto;
+  display: grid;
+  gap: 1rem 2rem;
+}
+.single-product-img {
+  height: 25rem;
+  border-radius: var(--radius);
+  object-fit: cover;
+}
+.single-product-company {
+  font-size: 1.2rem;
+  color: var(--clr-grey-8);
+  text-transform: uppercase;
+  letter-spacing: var(--spacing);
+  margin-bottom: 1.25rem;
+}
+.single-product-price {
+  color: var(--clr-grey-3);
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.product-color {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #222;
+  margin: 0.5rem 0.5rem 1.5rem 0;
+}
+
+.single-product-desc {
+  max-width: 25em;
+  line-height: 1.8;
+}
+@media screen and (min-width: 992px) {
+  .single-product-center {
+    grid-template-columns: 1fr 1fr;
+  }
+}
