@@ -1,7 +1,6 @@
 import { formatPrice } from './utils.js';
 
 const display = (products, element, filters) => {
-  console.log(products, element);
   // display products
   element.innerHTML = products
     .map(product => {
