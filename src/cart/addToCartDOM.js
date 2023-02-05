@@ -1,9 +1,10 @@
 import { formatPrice, getElement } from '../utils.js';
 const cartItemsDOM = getElement('.cart-items');
-const article = document.createElement('article');
 
 // destructure product to use its properties
 const addToCartDOM = ({ id, name, price, image, amount }) => {
+  const article = document.createElement('article'); // must be defined here to create a new article element each time
+
   article.classList.add('cart-item');
   article.setAttribute('data-id', id);
   article.innerHTML = `
