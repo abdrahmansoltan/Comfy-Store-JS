@@ -1,3 +1,4 @@
+import { addToCart } from './cart/setupCart.js';
 import { formatPrice } from './utils.js';
 
 const display = (products, element, filters) => {
@@ -32,6 +33,7 @@ const display = (products, element, filters) => {
     const parent = e.target.parentElement; // use event-bubbling to get add-to-cart <button> element
     if (parent.classList.contains('product-cart-btn')) {
       // add item with id to cart
+      addToCart(parent.dataset.id);
     }
   });
 };

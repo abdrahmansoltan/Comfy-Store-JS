@@ -1,7 +1,10 @@
 // global imports
+import '../cart/setupCart.js';
+import '../cart/toggleCart.js';
 import '../toggleSidebar.js';
 // specific
-import { singleProductUrl, getElement, formatPrice } from '../utils.js';
+import { addToCart } from '../cart/setupCart.js';
+import { formatPrice, getElement, singleProductUrl } from '../utils.js';
 
 // selections
 const loading = getElement('.page-loading');
@@ -41,7 +44,7 @@ window.addEventListener('DOMContentLoaded', async function () {
       companyDOM.textContent = `by ${company}`;
       priceDOM.textContent = formatPrice(price);
       descDOM.textContent = description;
-      colors.forEach((color) => {
+      colors.forEach(color => {
         const span = document.createElement('span');
         span.classList.add('product-color');
         span.style.backgroundColor = `${color}`;
@@ -65,4 +68,5 @@ window.addEventListener('DOMContentLoaded', async function () {
 
 cartBtn.addEventListener('click', function () {
   // add to cart logic
+  addToCart(productID);
 });

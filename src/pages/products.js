@@ -1,4 +1,5 @@
 // global imports
+import '../cart/setupCart.js';
 import '../cart/toggleCart.js';
 import '../toggleSidebar.js';
 

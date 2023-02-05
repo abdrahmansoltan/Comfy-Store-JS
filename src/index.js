@@ -1,9 +1,11 @@
 // global imports
+import './cart/setupCart.js';
 import './cart/toggleCart.js';
+import './toggleSidebar.js';
+// specific imports
 import display from './displayProducts.js';
 import fetchProducts from './fetchProducts.js';
 import { setupStore, store } from './store.js';
-import './toggleSidebar.js';
 import { getElement } from './utils.js';
 
 const init = async () => {
