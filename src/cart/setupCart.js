@@ -25,8 +25,8 @@ export const addToCart = id => {
     // Update values
     const amount = increaseAmount(id);
     const items = [...cartItemsDOM.querySelectorAll('.cart-item-amount')];
-    const newAmount = items.find(value => value.dataset.id === id);
-    newAmount.textContent = amount;
+    const currentCartItemAmountDOM = items.find(value => value.dataset.id === id);
+    currentCartItemAmountDOM.textContent = amount;
   }
   // add one to the item count
   displayCartItemCount();
